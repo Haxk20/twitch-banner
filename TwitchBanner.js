@@ -7,10 +7,10 @@ const TwitchJs = require('twitch-js');
 
 // Provide your token, username and channel. You can generate a token here:
 // https://twitchapps.com/tmi/
-const token = 'YourToken'; //Create an oauth token and paste it there. (DO NOT SHARE THAT KEY WITH ANYONE. If it leaks the only way to stop it being used is to delete your account from twitch.)
-const username = 'YourUsername'; //Your username
+const token = 'oauthtoken'; //Create an oauth token and paste it there. (DO NOT SHARE THAT KEY WITH ANYONE. If it leaks the only way to stop it being used is to delete your account from twitch.)
+const username = 'YourAccountName'; //Your username
 
-const channel = 'YourChannel'; //You channel name
+const channel = 'ChannelName'; //You channel name
 
 // Instantiate clients.
 const {
@@ -21,21 +21,18 @@ const {
     username
 });
 
-var time = 0;
-
-var numberOfBots = 14628; //Change this number based on the amount of bots. You can change it to 99999 and the bot will crash once it hits last name in the list.
-
-var jsonObj = require("FullPathToTheJsonFile");
+var jsonObj = require("FullPathToJsonFile");
 
 // Connect ...
 chat.connect().then(() => {
     // ... and then join the channel.
     chat.join(channel);
-    setInterval(function() {
-	if (time < numberOfBots) {
-	chat.say(channel, "/ban " + jsonObj.people[time].name);
-	time++;
-	}
-}, 320); //320ms. DO NOT CHANGE. If you go any faster twitch will kick you for spamming.
-    
+	jsonObj.people.forEach(ban);
+
 });
+
+function ban(item, index, arr) {
+	setTimeout(() => {
+		chat.say(channel, "/ban " + arr[index].name);
+	}, index * 320);
+}
