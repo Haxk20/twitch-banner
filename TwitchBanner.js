@@ -21,7 +21,7 @@ const {
     username
 });
 
-var jsonObj = require("FullPathToJsonFile");
+var jsonObj = require("./TwitchBotsToBan.json");
 
 // Connect ...
 chat.connect().then(() => {
