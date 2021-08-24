@@ -19,3 +19,6 @@ The rest of the guide is identical to the linux guide.
 
 I use Linux only and thus do not have a way to test it on Windows.
 If someone gets it to work on Windows in some very simple way please do a Pull Request creating a detailed guide :)
+
+The bots that are in the bot list are found and shared to the community by https://twitter.com/n_lasouris
+Full credit for finding the bots goes to him/her.
