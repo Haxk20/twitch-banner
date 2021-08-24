@@ -32,7 +32,7 @@ chat.connect().then(() => {
     // ... and then join the channel.
     chat.join(channel);
     setInterval(function() {
-	if (time < 14628) {
+	if (time < numberOfBots) {
 	chat.say(channel, "/ban " + jsonObj.people[time].name);
 	time++;
 	}
