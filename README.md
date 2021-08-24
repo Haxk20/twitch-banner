@@ -4,9 +4,11 @@ How to use:
 If you are on Linux its quite easy.
 Install node.js then in terminal
 > npm install twitch-js
+
 And then add the required info to the script. That is oauth key, twitch username, name of the channel. All in lowercase letters.
 Now just add the full path to the json file in the script.
 And now just run this in terminal in the same folder as where the script is
+
 > node TwitchBanner.js
 
 For windows things are pretty similar. Just that instead of terminal you will use command line.
