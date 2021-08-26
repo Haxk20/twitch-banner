@@ -22,3 +22,4 @@ If someone gets it to work on Windows in some very simple way please do a Pull R
 
 The bots that are in the bot list are found and shared to the community by https://twitter.com/n_lasouris
 Full credit for finding the bots goes to him/her.
+Some were found by me and added here as well.
